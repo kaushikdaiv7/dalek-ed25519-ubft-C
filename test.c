@@ -8,9 +8,11 @@
 int main() {
     unsigned char public_key[32], private_key[64], seed[32], signature[64];
 
-    // datatype used by ubft
+    /* datatype used by ubft */
     const uint8_t message[] = {255, 254, 253};
     const int message_len = sizeof(message);
+
+    /* dalek-ed25519 functions used by ubft */
 
     /* create a random seed, and a keypair out of that seed */
     ed25519_create_seed(seed);
