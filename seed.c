@@ -9,6 +9,13 @@
 #include <stdio.h>
 // #endif
 
+
+// HLS conversion note:
+/* Seed generation - It uses OS libraries and system calls to generate cryptographic seeds.
+So, it is best to generate seeds on the host and then transfer it to the kernel.
+*/ 
+
+
 int ed25519_create_seed(unsigned char *seed) {
 // #ifdef _WIN32
 //     HCRYPTPROV prov;
